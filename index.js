@@ -1,8 +1,8 @@
-const ax = require('axios')
-const TelegramBot = require('node-telegram-bot-api')
-const parser = require('./src/parser.js')
-const express = require('express')
-const bodyParser = require('body-parser');
+import { get } from 'axios'
+import TelegramBot from 'node-telegram-bot-api'
+import parser from './src/parser.js'
+import express from 'express'
+import { json } from 'body-parser'
 
 require('dotenv').config()
 
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 bot.onText(/\/word (.+)/, (msg, match) => {
   const chatId = msg.chat.id
   const word = match[1]
-  ax.get(`${process.env.OXFORD_API_URL}/entries/en-gb/${word}`, {
+  get(`${process.env.OXFORD_API_URL}/entries/en-gb/${word}`, {
     params: {
       fields: 'definitions',
       strictMatch: 'false'
@@ -41,7 +41,7 @@ bot.onText(/\/word (.+)/, (msg, match) => {
 
 const app = express()
 
-app.use(bodyParser.json())
+app.use(json())
 app.listen(process.env.PORT)
 app.post('/' + bot.token, (req, res) => {
   bot.processUpdate(req.body)
