@@ -1,0 +1,24 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "A simple bot for talegram that consumes oxford dictionary API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souzagab/node-telegram-bot.git"
+  },
+  "keywords": [
+    "Node",
+    "Telegram",
+    "Bot"
+  ],
+  "author": "Gabriel S.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/souzagab/node-telegram-bot/issues"
+  },
+  "homepage": "https://github.com/souzagab/node-telegram-bot#readme"
+}
