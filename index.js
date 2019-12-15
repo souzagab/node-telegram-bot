@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 bot.onText(/\/word (.+)/, (msg, match) => {
   const chatId = msg.chat.id
   const word = match[1]
-  ax.get(`${process.env.OXFORD_API_URL}/entries/en-us/${word}`, {
+  ax.get(`${process.env.OXFORD_API_URL}/entries/en-gb/${word}`, {
     params: {
       fields: 'definitions',
       strictMatch: 'false'
