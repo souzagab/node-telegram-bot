@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> A simple bot for talegram that consumes oxford dictionary API
+> A simple bot for telegram that consumes oxford dictionary API
 
 ### 🏠 [Homepage](https://github.com/souzagab/node-telegram-bot#readme)
 
